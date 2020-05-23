@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "potager"
+  "defaultProject": "potager",
+  "cli": {
+    "analytics": "4d7614ee-cbb7-449f-9cfe-df444d375d60"
+  }
 }

@@ -1,0 +1,15 @@
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1px 1px;
+  }
+  
+  .toolbar { grid-area: 1 / 1 / 2 / 13;
+color:green }
+  
+  .filter-input { grid-area: 2 / 4 / 3 / 10; }
+ .plantes-list {
+     grid-area: 3 /2 /4 /12;
+ }
+    

@@ -1,0 +1,32 @@
+.plantes-table {
+    width: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px 5px;
+    grid-template-areas: "input-filter action-btn";
+  }
+  
+  .input-filter { grid-area: input-filter; }
+  .mat-form-field {
+    padding: 5px;
+  } 
+  .action-btn { grid-area: action-btn;
+    margin: 5px;
+    place-self:end;
+ }
+  .action-btn .mat-mini-fab {
+  background-color:green
+}
+  .mat-row:hover  .mat-icon-button {
+    visibility:visible;
+  }
+  .mat-row  .mat-icon-button {
+    visibility:hidden
+    ;
+  }
+  td.mat-cell.description {
+    max-width:200px
+  }

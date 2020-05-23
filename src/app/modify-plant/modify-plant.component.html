@@ -1,0 +1,36 @@
+<div class="example-container">
+    <form [formGroup]="plantForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Nom</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <mat-select formControlName="type">
+                <mat-option value="Fruit">Fruit</mat-option>
+                <mat-option value="Vegetable">Vegetable</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <ng-container *ngIf="data[1]==='edit'">
+            <mat-form-field appearance="fill">
+                <mat-label>State</mat-label>
+                <mat-select formControlName="state">
+                    <mat-option value="Planted">Planted</mat-option>
+                    <mat-option value="Harvested">Harvested</mat-option>
+                    <mat-option value="Flowring">Flowring</mat-option>
+
+                </mat-select>
+            </mat-form-field>
+        </ng-container>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="desc"></textarea>
+        </mat-form-field>
+    </form>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Annuler</button>
+        <button mat-button [mat-dialog-close]="plantForm.value" cdkFocusInitial>Ok</button>
+    </div>
+</div>
